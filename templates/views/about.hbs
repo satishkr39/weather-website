@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="./css/styles.css"> <!-- linking our stylesheet to our page -->
+    <title> about page</title>
+    <link rel="icon" href="./img/logo_1.png">
+</head>
+
+<body>
+        <!-- THE REASON FOR KEEPING HEADER AND P TAG IN DIV TAG IS TO STICK THE FOOTER ON TO BOTTOM AND THIS HAS BEEN DONE BY USING 
+    FLEX OF CSS STYLINGS. CHECK STYLES.CSS ABOUT DETAILS OF FLEX -->
+    <div class="main-content">
+         {{>header}}
+    <p>{{title}}</p>
+    <img src="./img/satish_passport.jpg" class="portrait">
+    
+    </div>
+   
+    
+
+    {{>footer}}
+</body>
+
+</html>

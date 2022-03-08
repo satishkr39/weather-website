@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="./css/styles.css"> <!-- linking our stylesheet to our page -->
+    <link rel="icon" href="./img/logo_1.png">
+    
+    <title> home page</title>
+</head>
+
+<body>
+
+    <div class="main-content">
+        {{>header}}
+        <p> ur website</p>
+
+    <!-- form to get user address  -->
+        <form>
+            <input placeholder="Enter Location">
+            <button>Search</button>
+        </form>
+        <!-- place of actual temperature -->
+        <p id ="message-1">
+
+        </p>
+        <!-- place of actual error message -->
+        <p id="message-2">
+
+        </p>
+    </div>
+
+    
+    {{>footer}}
+    
+
+    <!-- placing the script tag on bottom makes sure that script is executed when the entire form is parsed -->
+    <script src='./js/app.js'>       </script>
+</body>
+
+</html>
