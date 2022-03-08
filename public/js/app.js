@@ -27,7 +27,7 @@ weatherForm.addEventListener('submit', (e) => {
     messageOne.textContent = 'loading temperature...' // set default value when page is loading 
     messageTwo.textContent = ''
     //console.log('User Entered: ', location)
-    var queryString = 'http://localhost:3000/weather?address='+location
+    var queryString = '/weather?address='+location  // use http://localhost:3000 when testing locally
     fetch(queryString).then((response) => {
         response.json().then((data) => {
             if (data.errorMessage){

@@ -12,6 +12,9 @@ console.log(path.join(__dirname, '../public'))
 // init our application
 const app = express()
 
+// get port number
+const port = process.env.PORT || 3000
+
 // EXPRESS PATHS CONFIG
 // store our html pages in variable
 const publicDirectoryPath = path.join(__dirname, '../public')
@@ -130,10 +133,13 @@ app.get('*', (req, res) => {
     })
 })
 
-// listening on port 3000
-app.listen(3000, () => {
-    console.log(' server is up running at localhost:3000')
+// listening on port 3000 : applicable only when we;re working locally. || when heroku then port value is fetched from sytem path
+
+app.listen(port, () => {
+    console.log(' server is up running at localhost:', port)
 })
+
+// while deploying with Heroku
 
 
 // to execute the application : node src/app.js
